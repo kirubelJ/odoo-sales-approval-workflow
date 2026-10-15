@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sale_order_approver_root_view" model="ir.actions.act_window">
+        <field name="name">Approvers</field>
+        <field name="res_model">sale.order.approver</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="sale_order_approver_view_form" model="ir.ui.view">
+        <field name="name">sale.order.approver.form</field>
+        <field name="model">sale.order.approver</field>
+        <field name="arch" type="xml">
+            <form class="o_lead_opportunity_form" js_class="crm_form">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="user_id"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="sale_order_approver_view_tree" model="ir.ui.view">
+        <field name="name">sale.order.approver.tree</field>
+         <field name="model">sale.order.approver</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Leads" sample="1" multi_edit="1">
+                <!--                <field name="company_id" column_invisible="True"/>-->
+                <field name="user_id"/>
+            </tree>
+
+        </field>
+    </record>
+</odoo>

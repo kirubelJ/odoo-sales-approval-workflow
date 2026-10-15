@@ -6,9 +6,8 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     def action_confirm(self):
-        # Call the original write method to update the record
         for order in self:
-            if order.partner_id:
+            if order.line:
                 raise UserError(_(
                     "The following orders are not in a state requiring confirmation"
                 ))
