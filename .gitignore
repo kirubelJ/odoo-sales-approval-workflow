@@ -1,0 +1,35 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution and packaging
+*.egg-info/
+build/
+dist/
+eggs/
+parts/
+var/
+wheels/
+
+# Translation files (optional: keep .po files, ignore compiled .mo files)
+*.mo
+
+# Environment and configuration
+.env
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
